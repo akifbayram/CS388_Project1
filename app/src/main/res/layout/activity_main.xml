@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:text="@string/name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subheader"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:background="@color/gray"
+        android:text="@string/streak"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/guess1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheader" />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guess1"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/guess2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess1"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guess2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/guess3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess2"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/answer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guess3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/correctAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/entryRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/entryRow"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/enteredGuess"
+            android:layout_width="275dp"
+            android:layout_height="60dp"
+            android:hint="@string/enter_guess"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/guessButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:text="@string/guess_btn"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/dropdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/header"
+        app:layout_constraintTop_toTopOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="@id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

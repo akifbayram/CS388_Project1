@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CS388_Project1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="guess_btn">Submit</string>
+    <string name="guess_hint">Enter your guess!</string>
+    <string name="guesses">Guesses</string>
+    <string name="correct">You were correct!</string>
+    <string name="incorrect">You were incorrect!</string>
+    <string name="enter_guess">Enter your guess!</string>
+    <string name="reset">Reset</string>
+    <string name="name"> WORDULATOR</string>
+    <string name="streak">Streak: %d</string>
+</resources>
